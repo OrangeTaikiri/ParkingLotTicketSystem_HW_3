@@ -9,9 +9,11 @@ package org.lecture;
  */
 public class Ticket {
 
-    String ticketNumber;
+    // final because no need to change the ticket number after initial creation
+    private final String ticketNumber;
 
-    TicketStatusEnumeration status;
+    // private to protect the state from manipulation outside of Ticket class
+    private TicketStatusEnumeration status;
 
     /**
      * Constructs a new Ticket with a given ticket number.
